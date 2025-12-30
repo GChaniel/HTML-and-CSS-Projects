@@ -1,2 +1,4 @@
 # HTML-and-CSS-Projects
-This repository is used for all assignment done on HTML and CSS class in my Pitman training
+This repository will contain all HTML and CSS assignments and projects from the Pitman training course.
+
+
