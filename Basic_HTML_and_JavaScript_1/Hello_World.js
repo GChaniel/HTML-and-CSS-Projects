@@ -1,0 +1,1 @@
+alert("Hello, wordl! I am an alert box!");
