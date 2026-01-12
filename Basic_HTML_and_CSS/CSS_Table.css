@@ -1,0 +1,36 @@
+table{
+	border: 1px solid silver;
+
+}
+
+.AliceBlue td:hover {
+	background-color: aliceblue;
+	color: black;
+}
+
+.AliceBlue td:hover {
+	background-color: aliceblue;
+	color: black;
+}
+
+.CornflowerBlue td:hover {
+	background-color: cornflowerblue;
+	color: black;
+}
+
+.DarkCyan td:hover {
+	background-color: darkcyan;
+	color: whitesmoke;
+}
+
+tr, th {
+	background-color: black;
+	color: cornsilk;
+	padding: 15px 0 15px 0;
+}
+
+tr, td {
+	background-color: darkgreen;
+	color: white;
+	padding: 5px 0 5px 5px;
+}
