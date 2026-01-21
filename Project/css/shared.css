@@ -1,0 +1,407 @@
+/*-------------------------------------------------------
+    Author: Isaac Gchaniel
+---------------------------------------------------------
+    GENERIC STYLES
+-------------------------------------------------------*/
+
+html {
+  font-family: sans-serif;
+  font-size: 63.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.43;
+  color: #1c1c1c;
+  background-color: #f7f9f8;
+}
+
+footer,
+nav {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "open sans", sans-serif;
+}
+
+h1 {
+  line-height: 50px;
+  font-weight: 900;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0f3d2e;
+  padding-bottom: 10px;
+}
+
+h1::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 150px;
+  background: #c6a75e;
+  margin: 5px auto 20px;
+  box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+h4 {
+  padding: 25px 0 0 0;
+  line-height: 40px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.text-center {
+  text-align: center;
+  padding: 350px 0 500px 0; /* This is the spacer before and after the main title logo */
+}
+
+.heading-padding {
+  padding-bottom: 40px;
+}
+
+section {
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.navbar {
+  height: 105px;
+  max-height: 340px;
+  display: block;
+}
+
+.container {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+
+.container-fluid {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+
+.row {
+  margin: 0 -15px 0 -15px;
+}
+
+.clearfix::after,
+.container::after,
+.navbar::after {
+  clear: both;
+  display: table;
+  content: "  ";
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* This ensure that the image cannot render outside of 
+    their container without forcing any scrollbars */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.menu-container {
+  max-height: 340px;
+  margin: 0% auto;
+  content: "  ";
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/*---------------------------------------------------------
+    HOME SECTION STYLES
+-------------------------------------------------------*/
+
+#home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* -- Video behaves like background */
+#home .home-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#home .home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 61, 46, 0.65);
+  z-index: 2;
+}
+
+#home .container {
+  position: relative;
+  z-index: 3;
+}
+
+.head-main {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  font-variant: small-caps;
+  color: #fff;
+  letter-spacing: 5pt;
+  font-size: 5.5em;
+  text-align: left;
+  font-family: impact, sans-serif;
+  line-height: 2;
+  font-weight: 300;
+  border: 5px double #fff;
+  padding: 10px;
+}
+
+.sub-main {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  max-width: 700px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+/*-------------------------------------------------------
+    VIDEO STYLES
+-------------------------------------------------------*/
+.video-frame {
+  border-radius: 20px;
+}
+
+/*----------------------------------------
+    contact styles
+------------------------------------------*/
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 35px 0;
+  background-color: #e3e9e5;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+  position: relative;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+#contact .contact-bg-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 45%;
+  height: 100%;
+  background: url("../images/Nigeria\ map.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 2;
+}
+
+.reservation {
+  width: 60%;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0px auto;
+  background-color: #e3e9e5;
+  box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 0.2),
+    1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.reservation h2 {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1.6em;
+  letter-spacing: 0pt;
+  word-spacing: 0pt;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+.reservation h2 span {
+  width: 70%;
+  text-align: center;
+  color: #1c1c1c;
+  margin: 0 auto;
+  font-size: 1.2em;
+  letter-spacing: 0.4pt;
+  word-spacing: 0.3pt;
+  padding: 0 40px;
+}
+
+.reservation p {
+  color: #1c1c1c;
+  width: 50%;
+  margin: 0% auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.reservation form {
+  font-size: 15px;
+  outline: none;
+  font-weight: 600;
+  color: #f7f9f8;
+  padding: 12px 12px;
+  width: 70%;
+  margin: 2% auto;
+  border-radius: 7px;
+  font-family: "railway", sans-serif;
+}
+
+.reservation input[type="text"] {
+  font-size: 14px;
+  outline: none;
+  font-weight: 500;
+  color: #1c1c1c;
+  padding: 2% 1% 2% 7%;
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 10px 1em;
+  border-radius: 7px;
+  font-family: "railway", sans-serif;
+}
+
+.reservation input [type="text"]:hover {
+  box-shadow: 0 0 18px rgba(100, 65, 0, 0.6);
+}
+
+.form-spacer {
+  padding: 30px 39px;
+}
+
+.terms {
+  margin: 45px 1px 0 0;
+  padding: 0 0 0 52px;
+  font-size: 14px;
+  line-height: 5px;
+  color: #1c1c1c;
+  cursor: pointer;
+  font-family: "Railway", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: inline;
+  float: right;
+}
+
+.terms:hover {
+  color: #c6a75e;
+  text-decoration: underline;
+}
+
+.submit input[type="submit"] {
+  color: #f7f9f8;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  margin: 0 3%;
+  padding: 10px 0;
+  width: 25%;
+  font-size: 16px;
+  transition: border-color 0.3s color 0.3s ease-in-out background-color 0.3s;
+  border-radius: 7px;
+  background-color: #0f3d2e;
+}
+
+.submit input[type="submit"]:hover {
+  background-color: #c6a75e;
+  color: #1c1c1c;
+}
+
+/* -----------------------------------------------------
+    FOOTER STYLES
+-------------------------------------------------------*/
+#footer {
+  background-color: #0f3d2e;
+  color: #f7f9f8;
+  padding: 20px 50px 20px 50px;
+  text-align: right;
+}
+
+/* -----------------------------------------------------
+    MEDIA QUERIES
+-------------------------------------------------------*/
+
+@media all and (max-width: 640px) and (min-width: 381px) {
+  .head-main {
+    font-size: 28px;
+  }
+}
+
+@media all and (max-width: 381px) and (min-width: 200px) {
+  .head-main {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

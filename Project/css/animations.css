@@ -1,0 +1,97 @@
+/*-----------------------------------------------
+    MENU SECTION ANIMATION
+-------------------------------------------------*/
+.menu {
+  color: #f7f9f8;
+  font: bold 12px/18px sans-serif;
+  text-align: center;
+  display: inline;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.menu li {
+  color: #f7f9f8;
+  background-color: #0f3d2e;
+  display: inline-block;
+  margin: 0% auto;
+  position: relative;
+  padding: 15px 4%;
+  border: 1px solid #c6a75e;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out;
+}
+
+.menu li:hover {
+  background-color: #c6a75e;
+  color: #0f3d2e;
+}
+
+/*-----------------------------------------------
+    GALLERY SECTION ANIMATION   
+-------------------------------------------------*/
+.photo {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 1px;
+  border: 1px solid #c6a75e;
+  background-color: #f7f9f8;
+}
+
+.photo-container {
+  text-align: center;
+  margin: 30px auto;
+  width: 500px;
+  height: 300px;
+}
+
+.photo-container img {
+  max-width: 100%;
+  width: 500px;
+  height: 300px;
+}
+
+.photo-overlay {
+  color: #f7f9f8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  justify-content: center; /* for centering text inside photo-overlay */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*------------------------------------------------
+    PHOTO OVERLAY TRANSITIONS   
+-------------------------------------------------*/
+.photo-overlay {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.photo-overlay:hover {
+  opacity: 1;
+}
+
+.photo img {
+  transition: transform 0.5s ease;
+  transform-origin: 50% 50%;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
