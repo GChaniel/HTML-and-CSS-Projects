@@ -1,0 +1,487 @@
+/*----------------------------------------------------
+    Author: Isaac Gchaniel 
+-------------------------------------------------------
+    General Style 
+----------------------------------------------------*/
+
+html {
+  font-family: sans-serif;
+  font-size: 63.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  line-height: 1.43;
+  color: #060024;
+  background: #efefef;
+}
+
+/* Make bookmarks land nicely below sticky nav */
+section {
+  padding-top: 50px;
+  margin-top: 0;
+  scroll-margin-top: 110px;
+}
+
+footer,
+nav {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+    HEADINGS    
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "open sans" sans-serif;
+}
+
+h1 {
+  line-height: 50px;
+  font-weight: 900;
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #060024;
+  padding-bottom: 10px;
+}
+
+h1::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 170px;
+  background: #ff4904;
+  margin: 8px auto 20px;
+}
+
+h2 {
+  line-height: 50px;
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: #060024;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.text-center {
+  text-align: center;
+  padding: 250px 0 220px 0; /* spacer before and after the logo*/
+}
+
+.heading-padding {
+  padding-bottom: 40px;
+}
+
+/*--------------------------------------------------------------
+    CONTAINERS 
+--------------------------------------------------------------*/
+.container {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+
+/* clearfix*/
+.container::after,
+.menu-container::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/*--------------------------------------------------------------
+    NAVIGATION
+--------------------------------------------------------------*/
+.wrap {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: static;
+}
+
+.menu-container {
+  max-height: 340px;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #060024;
+  border-bottom: 2px solid rgba(255, 73, 4, 0.45);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #eae9ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 13px;
+  padding: 12px 16px;
+  display: inline-block;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+.menu a:hover {
+  background-color: #ff4904;
+  color: #eae9ff;
+}
+
+/*--------------------------------------------------------------
+    HOME SECTION
+--------------------------------------------------------------*/
+#home {
+  position: relative;
+  height: 100vh;
+  padding-bottom: 0;
+  overflow: hidden;
+  color: #fff;
+  background: url(../Images/Company-background.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#home .container {
+  position: relative;
+  z-index: 2;
+}
+
+.sub-main {
+  color: rgba(234, 233, 255, 0.92);
+  font-size: 2rem;
+  max-width: 950px;
+  margin: 25rem auto 0;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+    GALLERY
+--------------------------------------------------------------*/
+#gallery {
+  background: #eae9ff;
+  padding-bottom: 10%;
+  margin-top: 0;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: #efefef;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.photo-container {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 36, 0.12);
+}
+
+@media all and (max-width: 900px) {
+  .photo-container {
+    width: 100%;
+  }
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 73, 4, 0.35);
+  background-color: #fff;
+}
+
+.photo img {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(6, 0, 36, 0.82);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+.photo-overlay h3 {
+  margin-top: 35%;
+  text-align: center;
+  color: #eae9ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.photo-overlay p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+}
+
+.photo:hover .photo-overlay {
+  opacity: 1;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+    VIDEO 
+--------------------------------------------------------------*/
+#videos {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+#videos .container {
+  text-align: center;
+}
+
+#videos p {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 20px;
+}
+
+#videos iframe {
+  border-radius: 14px;
+  border: 2px solid rgba(255, 73, 4, 0.25s);
+  display: inline-block;
+  margin: 18px auto;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+    CONTACT
+--------------------------------------------------------------*/
+#contact {
+  position: relative;
+  padding: 80px 0;
+  background-color: #060024;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 0, 36, 0.75);
+  z-index: 1;
+}
+
+#contact .container {
+  position: relative;
+  z-index: 3;
+}
+
+#contact h2 {
+  color: #fff;
+}
+
+#contact h2::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100px;
+  background: #ff4904;
+  margin: 8px auto 20px;
+}
+
+.contact-info p {
+  color: rgba(234, 233, 255, 0.9);
+  text-align: center;
+}
+
+.form-contact {
+  width: 70%;
+  padding: 25px;
+  max-width: 900px;
+  border-radius: 10px;
+  margin: 30px auto;
+  background-color: rgba(234, 233, 255, 0.12);
+  box-shadow:
+    -1px -1px 1px 0 rgba(0, 0, 0, 0.2),
+    1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.form-contact form {
+  width: 85%;
+  margin: 0 auto;
+}
+@media all and (max-width: 900px) {
+  .form-contact {
+    width: 92%;
+  }
+
+  #contact .contact-bg-panel {
+    display: none;
+  }
+}
+
+.contact-input {
+  font-size: 14px;
+  padding: 19px 10px;
+  width: 97%;
+  border: 1px solid #ccc;
+  margin: 12px 0;
+  border-radius: 7px;
+  display: block;
+  background-color: #fff;
+}
+
+.contact-input:focus {
+  border-color: #ff4904;
+  box-shadow: 0 0 10px rgba(255, 73, 4, 0.35);
+}
+
+.form-spacer {
+  padding: 45px 0 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms {
+  font-size: 14px;
+  line-height: 5px;
+  margin: 17px 1px 0 0;
+  position: relative;
+  display: inline;
+  color: rgba(234, 233, 255, 0.9);
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  float: right;
+}
+
+.terms:hover {
+  color: #ff4904;
+  text-decoration: underline;
+}
+
+.submit {
+  margin: 0;
+}
+
+.submit input[type="submit"] {
+  width: 200px;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 7px;
+  background-color: #ff4904;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+}
+
+.submit input[type="submit"]:hover {
+  background-color: #eae9ff;
+  color: #ff4904;
+}
+
+/*--------------------------------------------------------------
+    FOOTER
+--------------------------------------------------------------*/
+#footer {
+  background-color: #060024;
+  color: #eae9ff;
+  padding: 20px 50px;
+  text-align: right;
+  border-top: 2px solid rgba(255, 73, 4, 0.45);
+}
+
+/*--------------------------------------------------------------
+    MEDIA QUERIES
+--------------------------------------------------------------*/
+
+@media all and (max-width: 640px) and (min-width: 381px) {
+  .head-main {
+    font-size: 28px;
+  }
+}
+
+@media all and (max-width: 381px) and (min-width: 200px) {
+  .head-main {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 820px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1320px;
+  }
+}
