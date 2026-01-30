@@ -667,7 +667,7 @@ svg {
 }
 
 /*================  BREAKPOINTS ==================*/
-/* For Small devices*/
+/* For Small devices
 @media screen and (max-width: 320px) {
   .container {
     margin-inline: 1rem;
@@ -689,10 +689,10 @@ svg {
   .journey_card {
     padding-block: 1.5rem;
   }
-}
+} */
 
 /* For Medium devices*/
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 480px) {
   .home_container,
   .about_container,
   .portfolio_container,
@@ -709,6 +709,15 @@ svg {
   .home_education,
   .home_description {
     padding-bottom: 10px;
+  }
+
+  .skills_container,
+  .skills_content {
+    grid-template-columns: 1fr;
+  }
+
+  .skills_description {
+    text-align: center;
   }
 
   .journey_container {
@@ -744,6 +753,14 @@ svg {
     order: 1;
   }
 
+  .skills_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills_description {
+    text-align: inherit;
+  }
+
   .journey_container,
   .portfolio_container {
     grid-template-columns: repeat(2, 1fr);
@@ -751,7 +768,7 @@ svg {
 }
 
 /* For Large devices */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
   .section {
     padding-block: 7rem 2rem;
   }
@@ -786,9 +803,15 @@ svg {
   .nav_menu {
     width: initial;
   }
+
+  .skills_container {
+    grid-template-columns: 340px 1fr;
+    column-gap: 5rem;
+    align-items: start;
+  }
 }
 
-@media screen and (min-width: 1152px) {
+@media screen and (min-width: 1200px) {
   .container {
     margin-inline: auto;
   }
