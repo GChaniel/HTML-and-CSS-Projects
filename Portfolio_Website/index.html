@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--================ FAVICON ========================-->
+
+    <!--================ REMIXCONS ========================-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--================ CSS ========================-->
+    <link rel="stylesheet" href="./css/portfolio.css" />
+
+    <title>Isaac GChaniel Portfolio</title>
+  </head>
+  <body>
+    <!--====================== HEADER ========================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav_logo"> Isaac <span> GC</span> </a>
+
+        <!-- CSS toggle checkbox-->
+          <input type="checkbox" id="nav-toggle" class="nav_toggle_checkbox" />
+
+          <!-- Hamburger button-->
+        <label for="nav-toggle" class="nav_toggle" aria-label="open menu"> 
+          <i class="ri-menu-line"></i>
+        </label>
+
+        <div class="nav_menu" id="nav-menu">
+
+          <!-- Close button -->
+        <label for="nav-toggle" class="nav_close" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+        </label>
+
+        <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#about" class="nav_link">About</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#skills" class="nav_link">Skills</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#journey" class="nav_link">Journey</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#portfolio" class="nav_link">Portfolio</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#connect" class="nav_link">Connect</a>
+            </li>
+          </ul>    
+      </nav>
+    </header>
+
+    <!--=========================== MAIN =======================-->
+    <main class="main">
+      <!--========================= HOME =======================-->
+
+      <section class="home section" id="home">
+        <video
+          class="home_video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="./assets/Hero_video.m4v" type="video/mp4" />
+          Your browser does nbot support the video tag.
+        </video>
+
+        <div class="home_overlay"></div>
+
+        <div class="home_inner">
+          <div class="home_data">
+            <h1 class="home_kicker">Hi, I'm <span>Isaac GChaniel</span></h1>
+
+            <h3 class="home_education">Web & Software Developer</h3>
+
+            <p class="home_description">
+              I build clean, responsive, and scalable web applications using
+              modern web technologies. Focused on performance, accessibility,
+              and real-world problem solving.
+            </p>
+
+            <div class="home_cta">
+              <a href="./assets/Isaac-GChaniel-CV.pdf" class="button" download>Download CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--========================= ABOUT =======================-->
+
+      <section class="about section" id="about">
+        <div class="about_container container grid">
+          <div class="about_data">
+            <h2 class="section_title about_title">About Me</h2>
+
+            <p class="about_description">
+              I’m a web and software developer with a background in Computer &
+              Electronics Engineering and hands-on experience building
+              responsive, user-focused web applications.
+            </p>
+
+            <p class="about_description">
+              Trained extensively in modern web development, working with HTML,
+              CSS, Bootstrap, JavaScript fundamentals, Git, and version control
+              workflows.
+            </p>
+
+            <p class="about_description">
+              Beyond technical skills, I bring strong attention to detail,
+              problem-solving ability, and a commitment to writing clean,
+              maintainable code. I enjoy learning new technologies and adapting
+              quickly to industry best practices.
+            </p>
+
+            <p class="about_description">
+              I'm currently seeking opportunities where I can contribute, grow,
+              and build meaningful digital solutions.
+            </p>
+          </div>
+
+          <div class="about_image">
+            <div class="about_photo">
+              <img
+                src="./image/Isaac 2.jpg"
+                alt="Portrait of Isaac Gchaniel"
+                class="about_img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--========================= SKILLS =======================-->
+
+      <section class="skills section" id="skills">
+        <div class="skills_container container grid">
+          <div class="skills_data">
+            <h2 class="section_title">My Skills</h2>
+
+            <p class="skills_description">
+              See below the skills I have acquired and still enhancing on.
+            </p>
+          </div>
+
+          <div class="skills_content">
+            <div class="skills_group">
+              <h3 class="skills_title">Core Web</h3>
+              <ul class="skills_list">
+                <li class="skills_item">HTML5</li>
+                <li class="skills_item">CSS</li>
+                <li class="skills_item">Bootstrap</li>
+              </ul>
+            </div>
+
+            <div class="skills_group">
+              <h3 class="skills_title">Programming & Logic</h3>
+
+              <ul class="skills_list">
+                <li class="skills_item">JavaScript (Foundation)</li>
+                <li class="skills_item">Python (Beginner - Upcoming)</li>
+              </ul>
+            </div>
+
+            <div class="skills_group">
+              <h3 class="skills_title">Tools & Workflow</h3>
+
+              <ul class="skills_list">
+                <li class="skills_item">Git & GitHub</li>
+                <li class="skills_item">VS Code</li>
+                <li class="skills_item">REsponsive Design Principles</li>
+              </ul>
+            </div>
+
+            <div class="skills_group">
+              <h3 class="skills_title">Design Awareness</h3>
+              <ul class="skills_list">
+                <li class="skills_item">UI/UX Designs</li>
+                <li class="skills_item">Adobe XD/Figma</li>
+                <li class="skills_item">Adobe Illustrator/Photoshop</li>
+                <li class="skills_item">Final Cut Pro/Davinci</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--========================= LEARNING JOURNEY =======================-->
+
+      <section class="journey section" id="journey">
+        <h2 class="section_title">Learning Journey | Soft Skills</h2>
+
+        <h3 class="section_subtitle">What I bring to projects</h3>
+
+        <div class="journey_container container grid">
+          <!---- Learning Journey-->
+          <article class="journey_card">
+            <i class="ri-road-map-fill journey_icon"></i>
+
+            <h2 class="journey_title">Learning Journey</h2>
+
+            <ul class="journey_list">
+              <li class="journey_item">
+                <span class="list_subtitle">Focus: </span>Frontend Foundations
+                <span class="arrow">→</span> real projects
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Building: </span>Responsive websites
+                <span class="arrow">+</span> clean UI layouts
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Daily Tools: </span>VS Code,
+                Git/GitHun, DevTools
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Structured Training: </span> Advance
+                Web & Software Developer Diploma — PITMAN Training (In Progress)
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Upcoming Training: </span>JavaScript
+                <span class="arrow">→</span> Python
+                <span class="arrow">→ </span>Database and SQL<span class="arrow"
+                  >→
+                </span>
+                AWS Cloud
+              </li>
+            </ul>
+          </article>
+
+          <!-- Soft Skills-->
+          <article class="journey_card">
+            <i class="ri-team-fill journey_icon"></i>
+            <h2 class="journey_title">Soft Skills</h2>
+
+            <ul class="journey_list">
+              <li class="journey_item">
+                <span class="list_subtitle">Communication: </span>Clear updates
+                & collaboration
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Problem Solving: </span>Debug first,
+                structured thinking
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Attention to Details: </span
+                >Spacing, consistency, polish
+              </li>
+
+              <li class="journey_item">
+                <span class="list_subtitle">Time Management: </span>Milestones &
+                deadlines focused
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!--========================= PORTFOLIO =======================-->
+
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section_title">Portfolio</h2>
+
+        <h3 class="section_subtitle">Here are my recent works</h3>
+
+        <div class="portfolio_container container grid">
+          <!-------Wordpress Projeect 1----------->
+          <article class="portfolio_card">
+            <img
+              src="image/BAW-website.jpg"
+              alt="Portfolio image"
+              class="portfolio_img"
+            />
+
+            <div class="portfolio_modal">
+              <span class="portfolio_subtitle">website (WordPress)</span>
+
+              <h3 class="portfolio_title">Becoming a Woman</h3>
+
+              <a
+                href="https://becomingawoman.org/"
+                class="portfolio_button"
+                target="_blank"
+                >Visit Website <i class="ri-external-link-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card">
+            <img
+              src="image/Waribe Website.png"
+              alt="Portfolio image"
+              class="portfolio_img"
+            />
+
+            <div class="portfolio_modal">
+              <span class="portfolio_subtitle">website (Wordpress)</span>
+
+              <h3 class="portfolio_title">Waribe.com</h3>
+
+              <a
+                href="https://waribe.com/"
+                class="portfolio_button"
+                target="_blank"
+                >Visit Website <i class="ri-external-link-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card">
+            <img
+              src="image/GraceHola.jpg"
+              alt="Portfolio image"
+              class="portfolio_img"
+            />
+
+            <div class="portfolio_modal">
+              <span class="portfolio_subtitle">Website (WordPress)</span>
+
+              <h3 class="portfolio_title">GraceHola Consulting</h3>
+
+              <a
+                href="https://graceholaconsulting.co.uk/"
+                class="portfolio_button"
+                target="_blank"
+                >Visit Website <i class="ri-external-link-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card">
+            <img
+              src="image/Bootstrap-website.jpg"
+              alt="Portfolio image"
+              class="portfolio_img"
+            />
+
+            <div class="portfolio_modal">
+              <span class="portfolio_subtitle">Learning Project </span>
+
+              <h3 class="portfolio_title">Bootstrap Website</h3>
+
+              <a
+                href="https://github.com/GChaniel/HTML-and-CSS-Projects/tree/main/bootstrap_project"
+                class="portfolio_button"
+                target="_blank"
+                >View Code <i class="ri-external-link-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card">
+            <img
+              src="image/ichaniel.jpg"
+              alt="Portfolio image"
+              class="portfolio_img"
+            />
+
+            <div class="portfolio_modal">
+              <span class="portfolio_subtitle">Learning Project </span>
+
+              <h3 class="portfolio_title">Basic HTML & CSS</h3>
+
+              <a
+                href="https://github.com/GChaniel/HTML-and-CSS-Projects/tree/main/one-page-website"
+                class="portfolio_button"
+                target="_blank"
+                >View Code <i class="ri-external-link-line"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card">
+            <a
+              href="https://github.com/GChaniel"
+              class="portfolio_card portfolio_card--link"
+              target="_blank"
+              rel="noopener"
+              aria-label="open my Github profile"
+            >
+              <img
+                src="image/Github.jpg"
+                alt="GitHub Profile link card"
+                class="portfolio_img"
+            /></a>
+          </article>
+        </div>
+      </section>
+
+      <!--========================= CONNECT =======================-->
+
+      <section class="connect section" id="connect">
+        <h2 class="section_title">Contact Me</h2>
+
+        <h3 class="section_subtitle">
+          Interested in working together or have a project in mind? Send me a
+          message.
+        </h3>
+
+        <div class="connect_container container grid">
+          <form
+            action="https://formspree.io/f/xqeqrwbw"
+            method="post"
+            class="contact_form"
+            id="contact_form"
+          >
+            <div class="contact_group">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Name"
+                class="contact_input"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email"
+                class="contact_input"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="project_title"
+              required
+              placeholder="Project Title"
+              class="contact_input"
+            />
+
+            <textarea
+              name="message"
+              required
+              placeholder="Enter your Message"
+              class="contact_input"
+            ></textarea>
+
+            <p class="contact_message" id="contact-message"></p>
+
+            <button type="submit" class="button contact_button">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--========================= FOOTER =======================-->
+
+    <footer class="footer">
+      <div class="footer_container container grid">
+        <div class="footer_social">
+          <a
+            href="https://www.linkedin.com/in/isaacgchaniel/"
+            target="_blank"
+            class="footer_social-link"
+          >
+            <i class="ri-linkedin-fill"></i>
+          </a>
+
+          <a
+            href="https://github.com/GChaniel"
+            target="_blank"
+            class="footer_social-link"
+          >
+            <i class="ri-github-fill"></i>
+          </a>
+        </div>
+
+        <span class="footer_copyright">
+          &#169; Copyright IEN. All right reserved.
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
