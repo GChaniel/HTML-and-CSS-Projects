@@ -13,7 +13,7 @@
     />
 
     <!--================ CSS ========================-->
-    <link rel="stylesheet" href="./css/portfolio-v2.2.css" />
+    <link rel="stylesheet" href="./css/portfolio-v2.4.css" />
 
     <title>Isaac GChaniel Portfolio</title>
   </head>
@@ -24,21 +24,20 @@
         <a href="#home" class="nav_logo"> Isaac <span> GC</span> </a>
 
         <!-- CSS toggle checkbox-->
-          <input type="checkbox" id="nav-toggle" class="nav_toggle_checkbox" />
+        <input type="checkbox" id="nav-toggle" class="nav_toggle_checkbox" />
 
-          <!-- Hamburger button-->
-        <label for="nav-toggle" class="nav_toggle" aria-label="open menu"> 
+        <!-- Hamburger button-->
+        <label for="nav-toggle" class="nav_toggle" aria-label="open menu">
           <i class="ri-menu-line"></i>
         </label>
 
         <div class="nav_menu" id="nav-menu">
-
           <!-- Close button -->
-        <label for="nav-toggle" class="nav_close" aria-label="Close menu">
-        <i class="ri-close-line"></i>
-        </label>
+          <label for="nav-toggle" class="nav_close" aria-label="Close menu">
+            <i class="ri-close-line"></i>
+          </label>
 
-        <ul class="nav_list">
+          <ul class="nav_list">
             <li class="nav_item">
               <a href="#about" class="nav_link">About</a>
             </li>
@@ -58,7 +57,19 @@
             <li class="nav_item">
               <a href="#connect" class="nav_link">Connect</a>
             </li>
-          </ul>    
+
+            <button
+              class="theme_toggle"
+              id="theme-toggle"
+              aria-label="Toggle dark and light mode"
+            >
+              <span class="theme_text" id="theme-text">Day</span>
+              <span class="theme_circle">
+                <i class="ri-sun-line" id="theme-icon"></i>
+              </span>
+            </button>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -76,7 +87,7 @@
           preload="metadata"
         >
           <source src="./assets/Hero_video.m4v" type="video/mp4" />
-          Your browser does nbot support the video tag.
+          Your browser does not support the video tag.
         </video>
 
         <div class="home_overlay"></div>
@@ -85,7 +96,9 @@
           <div class="home_data">
             <h1 class="home_kicker">Hi, I'm <span>Isaac GChaniel</span></h1>
 
-            <h3 class="home_education">Web & Software Developer</h3>
+            <h3 class="home_education">
+              <span id="typing-text"></span>
+            </h3>
 
             <p class="home_description">
               I build clean, responsive, and scalable web applications using
@@ -94,7 +107,9 @@
             </p>
 
             <div class="home_cta">
-              <a href="./assets/Isaac-GChaniel-CV.pdf" class="button" download>Download CV</a>
+              <a href="./assets/Isaac-GChaniel-CV.pdf" class="button" download
+                >Download CV</a
+              >
             </div>
           </div>
         </div>
@@ -181,7 +196,7 @@
               <ul class="skills_list">
                 <li class="skills_item">Git & GitHub</li>
                 <li class="skills_item">VS Code</li>
-                <li class="skills_item">REsponsive Design Principles</li>
+                <li class="skills_item">Responsive Design Principles</li>
               </ul>
             </div>
 
@@ -225,7 +240,7 @@
 
               <li class="journey_item">
                 <span class="list_subtitle">Daily Tools: </span>VS Code,
-                Git/GitHun, DevTools
+                Git/GitHub, DevTools
               </li>
 
               <li class="journey_item">
@@ -281,9 +296,18 @@
 
         <h3 class="section_subtitle">Here are my recent works</h3>
 
+        <div class="portfolio_filters">
+          <button class="filter_btn active" data-filter="all">All</button>
+          <button class="filter_btn" data-filter="wordpress">WordPress</button>
+          <button class="filter_btn" data-filter="learning">
+            Learning Projects
+          </button>
+          <button class="filter_btn" data-filter="github">GitHub</button>
+        </div>
+
         <div class="portfolio_container container grid">
           <!-------Wordpress Projeect 1----------->
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="wordpress">
             <img
               src="image/BAW-website.jpg"
               alt="Portfolio image"
@@ -304,7 +328,7 @@
             </div>
           </article>
 
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="wordpress">
             <img
               src="image/Waribe Website.png"
               alt="Portfolio image"
@@ -325,7 +349,7 @@
             </div>
           </article>
 
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="wordpress">
             <img
               src="image/GraceHola.jpg"
               alt="Portfolio image"
@@ -346,7 +370,7 @@
             </div>
           </article>
 
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="learning">
             <img
               src="image/Bootstrap-website.jpg"
               alt="Portfolio image"
@@ -367,7 +391,7 @@
             </div>
           </article>
 
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="learning">
             <img
               src="image/ichaniel.jpg"
               alt="Portfolio image"
@@ -388,7 +412,7 @@
             </div>
           </article>
 
-          <article class="portfolio_card">
+          <article class="portfolio_card" data-category="github">
             <a
               href="https://github.com/GChaniel"
               class="portfolio_card portfolio_card--link"
@@ -426,14 +450,12 @@
               <input
                 type="text"
                 name="name"
-                required
                 placeholder="Name"
                 class="contact_input"
               />
               <input
                 type="email"
                 name="email"
-                required
                 placeholder="Email"
                 class="contact_input"
               />
@@ -442,14 +464,12 @@
             <input
               type="text"
               name="project_title"
-              required
               placeholder="Project Title"
               class="contact_input"
             />
 
             <textarea
               name="message"
-              required
               placeholder="Enter your Message"
               class="contact_input"
             ></textarea>
@@ -491,5 +511,9 @@
         </span>
       </div>
     </footer>
+    <button id="scrollTopBtn" aria-label="Back to top">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <script src="js/portfolio.js"></script>
   </body>
 </html>
