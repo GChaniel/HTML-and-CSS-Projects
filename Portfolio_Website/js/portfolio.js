@@ -134,8 +134,9 @@ const portfolioCards = document.querySelectorAll(
   ".portfolio_card[data-category]",
 );
 
-// Only offer categories that actually have projects, and hide the whole
-// bar until there are at least two categories to choose between.
+// The bar is hidden by default in the HTML (no flash before this runs).
+// Only offer categories that actually have projects, and reveal the bar
+// only when there are at least two categories to choose between.
 const usedCategories = new Set(
   Array.from(portfolioCards).map((card) => card.dataset.category),
 );
@@ -147,9 +148,7 @@ filterButtons.forEach((button) => {
   }
 });
 
-if (usedCategories.size < 2) {
-  filterBar.hidden = true;
-}
+filterBar.hidden = usedCategories.size < 2;
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {

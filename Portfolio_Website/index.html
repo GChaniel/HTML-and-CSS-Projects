@@ -248,14 +248,16 @@
           Selected projects across web, design and digital media
         </p>
 
-        <!-- Buttons for categories with no cards are hidden by js/portfolio.js.
-             Add a card with data-category="video | web | design | ai" and its
-             filter button appears automatically. -->
+        <!-- The filter bar is hidden by default. js/portfolio.js reveals it only
+             when two or more categories have cards, and hides buttons for
+             empty categories. Add a card with data-category="video | web |
+             design | ai" and its filter button appears automatically. -->
         <div
           class="portfolio_filters"
           id="portfolio-filters"
           role="group"
           aria-label="Filter projects by category"
+          hidden
         >
           <button
             type="button"
@@ -815,6 +817,6 @@
     <button type="button" id="scrollTopBtn" aria-label="Back to top">
       <i class="ri-arrow-up-line" aria-hidden="true"></i>
     </button>
-    <script src="js/portfolio.js"></script>
+    <script src="js/portfolio.js?v=2.5.1"></script>
   </body>
 </html>
