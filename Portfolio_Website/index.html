@@ -4,7 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--================ SEO / META ========================-->
+    <title>
+      Isaac GChaniel | Creative Technologist, Video Editor &amp; Web/UI Designer
+    </title>
+    <meta
+      name="description"
+      content="Creative technologist working across video editing, web and UI design, digital media and AI-assisted research and evaluation workflows. Explore selected work by Isaac GChaniel."
+    />
+    <link rel="canonical" href="https://isaacgchaniel.com/" />
+    <meta name="theme-color" content="#212d3c" />
+
+    <!--================ OPEN GRAPH / TWITTER ========================-->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Isaac GChaniel" />
+    <meta
+      property="og:title"
+      content="Isaac GChaniel | Creative Technologist"
+    />
+    <meta
+      property="og:description"
+      content="Selected work across video editing, web/UI design, visual media and AI-assisted workflows."
+    />
+    <meta property="og:url" content="https://isaacgchaniel.com/" />
+    <meta
+      property="og:image"
+      content="https://isaacgchaniel.com/image/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Isaac GChaniel: Creative Technologist, Video Editor, Web and UI Designer, AI Evaluation and Research"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!--================ FAVICON ========================-->
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+    <!--================ FONTS ========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!--================ REMIXCONS ========================-->
     <link
@@ -13,33 +59,54 @@
     />
 
     <!--================ CSS ========================-->
-    <link rel="stylesheet" href="./css/portfolio-v2.4.css" />
-
-    <title>Isaac GChaniel Portfolio</title>
+    <link rel="stylesheet" href="./css/portfolio-v2.5.css" />
   </head>
   <body>
+    <a href="#main" class="skip_link">Skip to content</a>
+
     <!--====================== HEADER ========================-->
     <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#home" class="nav_logo"> Isaac <span> GC</span> </a>
+      <nav class="nav container" aria-label="Main">
+        <a href="#home" class="nav_logo">Isaac <span>GChaniel</span></a>
 
-        <!-- CSS toggle checkbox-->
-        <input type="checkbox" id="nav-toggle" class="nav_toggle_checkbox" />
-
-        <!-- Hamburger button-->
-        <label for="nav-toggle" class="nav_toggle" aria-label="open menu">
-          <i class="ri-menu-line"></i>
-        </label>
+        <!-- Hamburger button -->
+        <button
+          type="button"
+          class="nav_toggle"
+          id="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <i class="ri-menu-line" aria-hidden="true"></i>
+        </button>
 
         <div class="nav_menu" id="nav-menu">
           <!-- Close button -->
-          <label for="nav-toggle" class="nav_close" aria-label="Close menu">
-            <i class="ri-close-line"></i>
-          </label>
+          <button
+            type="button"
+            class="nav_close"
+            id="nav-close"
+            aria-label="Close menu"
+          >
+            <i class="ri-close-line" aria-hidden="true"></i>
+          </button>
 
           <ul class="nav_list">
             <li class="nav_item">
+              <a href="#what-i-do" class="nav_link">What I Do</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#portfolio" class="nav_link">Work</a>
+            </li>
+
+            <li class="nav_item">
               <a href="#about" class="nav_link">About</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#experience" class="nav_link">Experience</a>
             </li>
 
             <li class="nav_item">
@@ -47,72 +114,364 @@
             </li>
 
             <li class="nav_item">
-              <a href="#journey" class="nav_link">Journey</a>
+              <a href="#connect" class="nav_link">Contact</a>
             </li>
 
             <li class="nav_item">
-              <a href="#portfolio" class="nav_link">Portfolio</a>
+              <button
+                type="button"
+                class="theme_toggle"
+                id="theme-toggle"
+                aria-label="Toggle dark and light mode"
+              >
+                <span class="theme_text" id="theme-text">Day</span>
+                <span class="theme_circle">
+                  <i class="ri-sun-line" id="theme-icon" aria-hidden="true"></i>
+                </span>
+              </button>
             </li>
-
-            <li class="nav_item">
-              <a href="#connect" class="nav_link">Connect</a>
-            </li>
-
-            <button
-              class="theme_toggle"
-              id="theme-toggle"
-              aria-label="Toggle dark and light mode"
-            >
-              <span class="theme_text" id="theme-text">Day</span>
-              <span class="theme_circle">
-                <i class="ri-sun-line" id="theme-icon"></i>
-              </span>
-            </button>
           </ul>
         </div>
       </nav>
     </header>
 
     <!--=========================== MAIN =======================-->
-    <main class="main">
+    <main class="main" id="main">
       <!--========================= HOME =======================-->
 
       <section class="home section" id="home">
         <video
           class="home_video"
+          id="home-video"
           autoplay
           muted
           loop
           playsinline
           preload="metadata"
+          poster="./assets/hero-poster.jpg"
+          aria-hidden="true"
         >
-          <source src="./assets/Hero_video.m4v" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source
+            src="./assets/hero-mobile.mp4"
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          <source src="./assets/hero.webm" type="video/webm" />
+          <source src="./assets/hero.mp4" type="video/mp4" />
         </video>
 
         <div class="home_overlay"></div>
 
+        <button
+          type="button"
+          class="video_toggle"
+          id="video-toggle"
+          aria-label="Pause background video"
+        >
+          <i
+            class="ri-pause-line"
+            id="video-toggle-icon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
         <div class="home_inner">
           <div class="home_data">
-            <h1 class="home_kicker">Hi, I'm <span>Isaac GChaniel</span></h1>
+            <h1 class="home_kicker"><span>Isaac GChaniel</span></h1>
 
-            <h3 class="home_education">
-              <span id="typing-text"></span>
-            </h3>
+            <p class="home_disciplines">
+              <span>Video Editor <span aria-hidden="true">•</span></span>
+              <span>Web &amp; UI Designer <span aria-hidden="true">•</span></span>
+              <span>AI Evaluation &amp; Research</span>
+            </p>
 
             <p class="home_description">
-              I build clean, responsive, and scalable web applications using
-              modern web technologies. Focused on performance, accessibility,
-              and real-world problem solving.
+              Creative technologist with an engineering background, working
+              across visual, digital and AI-assisted workflows.
             </p>
 
             <div class="home_cta">
-              <a href="./assets/Isaac-GChaniel-CV.pdf" class="button" download
-                >Download CV</a
-              >
+              <a href="#portfolio" class="button">View Selected Work</a>
+              <a href="#connect" class="button button--outline">Contact Me</a>
             </div>
           </div>
         </div>
+      </section>
+
+      <!--========================= WHAT I DO =======================-->
+
+      <section class="whatido section" id="what-i-do">
+        <h2 class="section_title">What I Do</h2>
+
+        <p class="section_subtitle">Three areas I work across</p>
+
+        <div class="whatido_container container grid">
+          <article class="whatido_card">
+            <i class="ri-movie-2-line whatido_icon" aria-hidden="true"></i>
+            <h3 class="whatido_title">Video &amp; Visual</h3>
+            <p class="whatido_text">
+              Video editing, multicam workflows and colour correction/grading in
+              DaVinci Resolve, Adobe Premiere Pro and Final Cut Pro, with a
+              careful eye for visual quality.
+            </p>
+          </article>
+
+          <article class="whatido_card">
+            <i class="ri-layout-4-line whatido_icon" aria-hidden="true"></i>
+            <h3 class="whatido_title">Web &amp; UI Design</h3>
+            <p class="whatido_text">
+              Responsive websites and interfaces built with WordPress and
+              Elementor, designed in Figma, with hand-coded HTML, CSS and
+              Bootstrap where needed.
+            </p>
+          </article>
+
+          <article class="whatido_card">
+            <i class="ri-search-eye-line whatido_icon" aria-hidden="true"></i>
+            <h3 class="whatido_title">AI Evaluation &amp; Research</h3>
+            <p class="whatido_text">
+              AI-assisted research, prompt design, output review, fact-checking
+              and structured reasoning across multi-step workflows. I use AI and
+              agentic tools to research, test ideas, review results and refine
+              instructions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!--========================= SELECTED WORK =======================-->
+
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section_title">Selected Work</h2>
+
+        <p class="section_subtitle">
+          Selected projects across web, design and digital media
+        </p>
+
+        <!-- Buttons for categories with no cards are hidden by js/portfolio.js.
+             Add a card with data-category="video | web | design | ai" and its
+             filter button appears automatically. -->
+        <div
+          class="portfolio_filters"
+          id="portfolio-filters"
+          role="group"
+          aria-label="Filter projects by category"
+        >
+          <button
+            type="button"
+            class="filter_btn active"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            class="filter_btn"
+            data-filter="video"
+            aria-pressed="false"
+          >
+            Video
+          </button>
+          <button
+            type="button"
+            class="filter_btn"
+            data-filter="web"
+            aria-pressed="false"
+          >
+            Web &amp; UI
+          </button>
+          <button
+            type="button"
+            class="filter_btn"
+            data-filter="design"
+            aria-pressed="false"
+          >
+            Design
+          </button>
+          <button
+            type="button"
+            class="filter_btn"
+            data-filter="ai"
+            aria-pressed="false"
+          >
+            AI Evaluation
+          </button>
+        </div>
+
+        <div class="portfolio_container container grid">
+          <article class="portfolio_card" data-category="web">
+            <img
+              src="image/rccg-cdc.webp"
+              alt="Homepage of the RCCG City of David Cambridge website"
+              class="portfolio_img"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+
+            <div class="portfolio_body">
+              <span class="portfolio_tag">Web &amp; UI</span>
+
+              <h3 class="portfolio_title">RCCG City of David Cambridge</h3>
+
+              <p class="portfolio_summary">
+                Church website for events, sermons, forms and digital content.
+              </p>
+
+              <p class="portfolio_role">
+                <strong>Web/UI design &amp; website management.</strong>
+                Redesigned and continue to maintain the site, including
+                responsive pages, reusable templates, events, sermons, forms and
+                content systems.
+              </p>
+
+              <ul class="portfolio_tools" aria-label="Tools used">
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+
+              <a
+                href="https://rccgcambridge.org.uk"
+                class="portfolio_button"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit site<span class="visually-hidden">
+                  (opens in a new tab)</span
+                >
+                <i class="ri-external-link-line" aria-hidden="true"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card" data-category="web">
+            <img
+              src="image/baw-website.webp"
+              alt="Homepage of the Becoming a Woman website"
+              class="portfolio_img"
+              width="800"
+              height="852"
+              loading="lazy"
+            />
+
+            <div class="portfolio_body">
+              <span class="portfolio_tag">Web &amp; UI</span>
+
+              <h3 class="portfolio_title">Becoming a Woman</h3>
+
+              <p class="portfolio_summary">
+                Website for the Becoming a Woman conference.
+              </p>
+
+              <p class="portfolio_role">
+                Designed, built and continue to maintain the website.
+              </p>
+
+              <ul class="portfolio_tools" aria-label="Tools used">
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+
+              <a
+                href="https://becomingawoman.org/"
+                class="portfolio_button"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit site<span class="visually-hidden">
+                  (opens in a new tab)</span
+                >
+                <i class="ri-external-link-line" aria-hidden="true"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card" data-category="web">
+            <img
+              src="image/waribe.webp"
+              alt="Homepage of the Waribe website"
+              class="portfolio_img"
+              width="800"
+              height="800"
+              loading="lazy"
+            />
+
+            <div class="portfolio_body">
+              <span class="portfolio_tag">Web &amp; UI</span>
+
+              <h3 class="portfolio_title">Waribe</h3>
+
+              <p class="portfolio_summary">Website for Waribe.</p>
+
+              <p class="portfolio_role">Designed and built the website.</p>
+
+              <ul class="portfolio_tools" aria-label="Tools used">
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+
+              <a
+                href="https://waribe.com/"
+                class="portfolio_button"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit site<span class="visually-hidden">
+                  (opens in a new tab)</span
+                >
+                <i class="ri-external-link-line" aria-hidden="true"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="portfolio_card" data-category="web">
+            <img
+              src="image/gracehola.webp"
+              alt="Homepage of the GraceHola Consulting website"
+              class="portfolio_img"
+              width="800"
+              height="852"
+              loading="lazy"
+            />
+
+            <div class="portfolio_body">
+              <span class="portfolio_tag">Web &amp; UI</span>
+
+              <h3 class="portfolio_title">GraceHola Consulting</h3>
+
+              <p class="portfolio_summary">Website for GraceHola Consulting.</p>
+
+              <p class="portfolio_role">
+                Designed, built and continue to maintain the website.
+              </p>
+
+              <ul class="portfolio_tools" aria-label="Tools used">
+                <li>WordPress</li>
+                <li>Elementor</li>
+                <li>Figma</li>
+              </ul>
+
+              <a
+                href="https://graceholaconsulting.co.uk/"
+                class="portfolio_button"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit site<span class="visually-hidden">
+                  (opens in a new tab)</span
+                >
+                <i class="ri-external-link-line" aria-hidden="true"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="portfolio_more">
+          More code and learning projects on
+          <a
+            href="https://github.com/GChaniel"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<span class="visually-hidden"> (opens in a new tab)</span></a
+          >.
+        </p>
       </section>
 
       <!--========================= ABOUT =======================-->
@@ -123,308 +482,198 @@
             <h2 class="section_title about_title">About Me</h2>
 
             <p class="about_description">
-              I’m a web and software developer with a background in Computer &
-              Electronics Engineering and hands-on experience building
-              responsive, user-focused web applications.
+              I'm a creative technologist with a BEng (Hons) in Computer &amp;
+              Electronics Engineering. That training gives me a structured,
+              detail-first way of working, which I apply to creative and digital
+              projects.
             </p>
 
             <p class="about_description">
-              Trained extensively in modern web development, working with HTML,
-              CSS, Bootstrap, JavaScript fundamentals, Git, and version control
-              workflows.
+              I run Ichaniel Studios, where I work as a designer and video
+              editor, and I serve as Creative Director / Media Director at RCCG
+              City of David Cambridge, coordinating video, live broadcast,
+              graphics and web content.
             </p>
 
             <p class="about_description">
-              Beyond technical skills, I bring strong attention to detail,
-              problem-solving ability, and a commitment to writing clean,
-              maintainable code. I enjoy learning new technologies and adapting
-              quickly to industry best practices.
+              I also use AI and agentic tools across research, creative and
+              technical workflows, including prompt design, output review,
+              fact-checking, result verification and refining instructions. I'm
+              developing this further towards AI evaluation and training work.
             </p>
 
-            <p class="about_description">
-              I'm currently seeking opportunities where I can contribute, grow,
-              and build meaningful digital solutions.
-            </p>
+            <h3 class="about_subtitle">Education</h3>
+            <ul class="about_education">
+              <li>
+                <strong
+                  >BEng (Hons) Computer &amp; Electronics Engineering</strong
+                >
+              </li>
+              <li>
+                <strong>Advanced Web &amp; Software Developer Diploma</strong>,
+                PITMAN Training (in progress)
+              </li>
+            </ul>
           </div>
 
           <div class="about_image">
             <div class="about_photo">
               <img
-                src="./image/Isaac 2.jpg"
-                alt="Portrait of Isaac Gchaniel"
+                src="./image/isaac-portrait.webp"
+                alt="Portrait of Isaac GChaniel"
                 class="about_img"
+                width="900"
+                height="900"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </section>
 
+      <!--========================= EXPERIENCE =======================-->
+
+      <section class="experience section" id="experience">
+        <h2 class="section_title">Experience</h2>
+
+        <p class="section_subtitle">Where I've applied these skills</p>
+
+        <ol class="timeline container">
+          <li class="timeline_item">
+            <p class="timeline_dates">April 2016 – Present</p>
+            <div class="timeline_body">
+              <h3 class="timeline_role">
+                Founder / Creative Designer &amp; Video Editor
+              </h3>
+              <p class="timeline_org">Ichaniel Studios</p>
+              <ul class="timeline_list">
+                <li>
+                  Run creative projects across video editing, graphic design,
+                  web design and digital media, taking work from brief through
+                  review and final delivery.
+                </li>
+                <li>
+                  Edit video in DaVinci Resolve, Adobe Premiere Pro and Final
+                  Cut Pro, including multicam footage, audio syncing, colour
+                  correction/grading and final export.
+                </li>
+                <li>
+                  Create visual and UI assets using Figma, Photoshop and
+                  Illustrator and review work for accuracy, consistency and
+                  quality.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline_item">
+            <p class="timeline_dates">July 2016 – Present</p>
+            <div class="timeline_body">
+              <h3 class="timeline_role">Creative Director / Media Director</h3>
+              <p class="timeline_org">RCCG City of David Cambridge</p>
+              <ul class="timeline_list">
+                <li>
+                  Coordinate creative and technical media work across video
+                  production, live broadcast, graphics, LED content, website
+                  content and digital campaigns.
+                </li>
+                <li>
+                  Edit multicamera footage in DaVinci Resolve and review content
+                  for framing, continuity, colour, clarity and visual
+                  consistency.
+                </li>
+                <li>
+                  Design and maintain WordPress/Elementor pages, reusable
+                  templates, event content, forms and digital experiences.
+                </li>
+                <li>
+                  Work across camera, vMix, ATEM and live-production workflows.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline_item timeline_item--compact">
+            <p class="timeline_dates">Aug 2019 – Present</p>
+            <div class="timeline_body">
+              <h3 class="timeline_role">
+                Customer Service Associate (SDS)
+                <span class="timeline_org_inline">· Amazon UK</span>
+              </h3>
+              <p class="timeline_summary">
+                Research and verify information across multiple systems, analyse
+                complex customer issues and communicate clear outcomes while
+                following detailed processes in a remote environment.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
       <!--========================= SKILLS =======================-->
 
       <section class="skills section" id="skills">
-        <div class="skills_container container grid">
-          <div class="skills_data">
-            <h2 class="section_title">My Skills</h2>
+        <h2 class="section_title">Skills</h2>
 
-            <p class="skills_description">
-              See below the skills I have acquired and still enhancing on.
-            </p>
-          </div>
+        <p class="section_subtitle">
+          The tools and methods I use across video, design, web and AI-assisted
+          work
+        </p>
 
-          <div class="skills_content">
-            <div class="skills_group">
-              <h3 class="skills_title">Core Web</h3>
-              <ul class="skills_list">
-                <li class="skills_item">HTML5</li>
-                <li class="skills_item">CSS</li>
-                <li class="skills_item">Bootstrap</li>
-              </ul>
-            </div>
-
-            <div class="skills_group">
-              <h3 class="skills_title">Programming & Logic</h3>
-
-              <ul class="skills_list">
-                <li class="skills_item">JavaScript (Foundation)</li>
-                <li class="skills_item">Python (Beginner - Upcoming)</li>
-              </ul>
-            </div>
-
-            <div class="skills_group">
-              <h3 class="skills_title">Tools & Workflow</h3>
-
-              <ul class="skills_list">
-                <li class="skills_item">Git & GitHub</li>
-                <li class="skills_item">VS Code</li>
-                <li class="skills_item">Responsive Design Principles</li>
-              </ul>
-            </div>
-
-            <div class="skills_group">
-              <h3 class="skills_title">Design Awareness</h3>
-              <ul class="skills_list">
-                <li class="skills_item">UI/UX Designs</li>
-                <li class="skills_item">Adobe XD/Figma</li>
-                <li class="skills_item">Adobe Illustrator/Photoshop</li>
-                <li class="skills_item">Final Cut Pro/Davinci</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--========================= LEARNING JOURNEY =======================-->
-
-      <section class="journey section" id="journey">
-        <h2 class="section_title">Learning Journey | Soft Skills</h2>
-
-        <h3 class="section_subtitle">What I bring to projects</h3>
-
-        <div class="journey_container container grid">
-          <!---- Learning Journey-->
-          <article class="journey_card">
-            <i class="ri-road-map-fill journey_icon"></i>
-
-            <h2 class="journey_title">Learning Journey</h2>
-
-            <ul class="journey_list">
-              <li class="journey_item">
-                <span class="list_subtitle">Focus: </span>Frontend Foundations
-                <span class="arrow">→</span> real projects
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Building: </span>Responsive websites
-                <span class="arrow">+</span> clean UI layouts
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Daily Tools: </span>VS Code,
-                Git/GitHub, DevTools
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Structured Training: </span> Advance
-                Web & Software Developer Diploma — PITMAN Training (In Progress)
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Upcoming Training: </span>JavaScript
-                <span class="arrow">→</span> Python
-                <span class="arrow">→ </span>Database and SQL<span class="arrow"
-                  >→
-                </span>
-                AWS Cloud
-              </li>
+        <div class="skills_content container">
+          <article class="skills_card">
+            <h3 class="skills_title">Video &amp; Visual</h3>
+            <ul class="skills_chips">
+              <li class="skills_chip">DaVinci Resolve</li>
+              <li class="skills_chip">Adobe Premiere Pro</li>
+              <li class="skills_chip">Final Cut Pro</li>
+              <li class="skills_chip">Video Editing</li>
+              <li class="skills_chip">Multicam Editing</li>
+              <li class="skills_chip">Colour Correction &amp; Grading</li>
+              <li class="skills_chip">Visual QA</li>
             </ul>
           </article>
 
-          <!-- Soft Skills-->
-          <article class="journey_card">
-            <i class="ri-team-fill journey_icon"></i>
-            <h2 class="journey_title">Soft Skills</h2>
-
-            <ul class="journey_list">
-              <li class="journey_item">
-                <span class="list_subtitle">Communication: </span>Clear updates
-                & collaboration
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Problem Solving: </span>Debug first,
-                structured thinking
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Attention to Details: </span
-                >Spacing, consistency, polish
-              </li>
-
-              <li class="journey_item">
-                <span class="list_subtitle">Time Management: </span>Milestones &
-                deadlines focused
-              </li>
+          <article class="skills_card">
+            <h3 class="skills_title">Web &amp; UI</h3>
+            <ul class="skills_chips">
+              <li class="skills_chip">WordPress</li>
+              <li class="skills_chip">Elementor</li>
+              <li class="skills_chip">Figma</li>
+              <li class="skills_chip">HTML</li>
+              <li class="skills_chip">CSS</li>
+              <li class="skills_chip">Bootstrap</li>
+              <li class="skills_chip">Responsive Design</li>
+              <li class="skills_chip">Git/GitHub</li>
+              <li class="skills_chip">VS Code</li>
+              <li class="skills_chip">JavaScript (Foundational)</li>
             </ul>
           </article>
-        </div>
-      </section>
 
-      <!--========================= PORTFOLIO =======================-->
-
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section_title">Portfolio</h2>
-
-        <h3 class="section_subtitle">Here are my recent works</h3>
-
-        <div class="portfolio_filters">
-          <button class="filter_btn active" data-filter="all">All</button>
-          <button class="filter_btn" data-filter="wordpress">WordPress</button>
-          <button class="filter_btn" data-filter="learning">
-            Learning Projects
-          </button>
-          <button class="filter_btn" data-filter="github">GitHub</button>
-        </div>
-
-        <div class="portfolio_container container grid">
-          <!-------Wordpress Projeect 1----------->
-          <article class="portfolio_card" data-category="wordpress">
-            <img
-              src="image/BAW-website.jpg"
-              alt="Portfolio image"
-              class="portfolio_img"
-            />
-
-            <div class="portfolio_modal">
-              <span class="portfolio_subtitle">website (WordPress)</span>
-
-              <h3 class="portfolio_title">Becoming a Woman</h3>
-
-              <a
-                href="https://becomingawoman.org/"
-                class="portfolio_button"
-                target="_blank"
-                >Visit Website <i class="ri-external-link-line"></i
-              ></a>
-            </div>
+          <article class="skills_card">
+            <h3 class="skills_title">Design</h3>
+            <ul class="skills_chips">
+              <li class="skills_chip">Adobe Photoshop</li>
+              <li class="skills_chip">Adobe Illustrator</li>
+              <li class="skills_chip">Graphic Design</li>
+              <li class="skills_chip">UI Design</li>
+              <li class="skills_chip">Visual Design</li>
+            </ul>
           </article>
 
-          <article class="portfolio_card" data-category="wordpress">
-            <img
-              src="image/Waribe Website.png"
-              alt="Portfolio image"
-              class="portfolio_img"
-            />
-
-            <div class="portfolio_modal">
-              <span class="portfolio_subtitle">website (Wordpress)</span>
-
-              <h3 class="portfolio_title">Waribe.com</h3>
-
-              <a
-                href="https://waribe.com/"
-                class="portfolio_button"
-                target="_blank"
-                >Visit Website <i class="ri-external-link-line"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="portfolio_card" data-category="wordpress">
-            <img
-              src="image/GraceHola.jpg"
-              alt="Portfolio image"
-              class="portfolio_img"
-            />
-
-            <div class="portfolio_modal">
-              <span class="portfolio_subtitle">Website (WordPress)</span>
-
-              <h3 class="portfolio_title">GraceHola Consulting</h3>
-
-              <a
-                href="https://graceholaconsulting.co.uk/"
-                class="portfolio_button"
-                target="_blank"
-                >Visit Website <i class="ri-external-link-line"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="portfolio_card" data-category="learning">
-            <img
-              src="image/Bootstrap-website.jpg"
-              alt="Portfolio image"
-              class="portfolio_img"
-            />
-
-            <div class="portfolio_modal">
-              <span class="portfolio_subtitle">Learning Project </span>
-
-              <h3 class="portfolio_title">Bootstrap Website</h3>
-
-              <a
-                href="https://github.com/GChaniel/HTML-and-CSS-Projects/tree/main/bootstrap_project"
-                class="portfolio_button"
-                target="_blank"
-                >View Code <i class="ri-external-link-line"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="portfolio_card" data-category="learning">
-            <img
-              src="image/ichaniel.jpg"
-              alt="Portfolio image"
-              class="portfolio_img"
-            />
-
-            <div class="portfolio_modal">
-              <span class="portfolio_subtitle">Learning Project </span>
-
-              <h3 class="portfolio_title">Basic HTML & CSS</h3>
-
-              <a
-                href="https://github.com/GChaniel/HTML-and-CSS-Projects/tree/main/one-page-website"
-                class="portfolio_button"
-                target="_blank"
-                >View Code <i class="ri-external-link-line"></i
-              ></a>
-            </div>
-          </article>
-
-          <article class="portfolio_card" data-category="github">
-            <a
-              href="https://github.com/GChaniel"
-              class="portfolio_card portfolio_card--link"
-              target="_blank"
-              rel="noopener"
-              aria-label="open my Github profile"
-            >
-              <img
-                src="image/Github.jpg"
-                alt="GitHub Profile link card"
-                class="portfolio_img"
-            /></a>
+          <article class="skills_card">
+            <h3 class="skills_title">AI &amp; Research</h3>
+            <ul class="skills_chips">
+              <li class="skills_chip">Generative AI</li>
+              <li class="skills_chip">Prompt Design</li>
+              <li class="skills_chip">Agentic AI Tools</li>
+              <li class="skills_chip">AI Output Review</li>
+              <li class="skills_chip">Online Research</li>
+              <li class="skills_chip">Fact-checking</li>
+              <li class="skills_chip">Critical Reasoning</li>
+              <li class="skills_chip">Quality Assurance</li>
+              <li class="skills_chip">Multi-step Workflows</li>
+            </ul>
           </article>
         </div>
       </section>
@@ -434,47 +683,95 @@
       <section class="connect section" id="connect">
         <h2 class="section_title">Contact Me</h2>
 
-        <h3 class="section_subtitle">
-          Interested in working together or have a project in mind? Send me a
-          message.
-        </h3>
+        <p class="section_subtitle">
+          Have a project, role or collaboration in mind? I’d be happy to hear
+          from you.
+        </p>
 
         <div class="connect_container container grid">
+          <ul class="connect_links">
+            <li>
+              <a href="mailto:Isaac_ebube@hotmail.com" class="connect_link">
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                Isaac_ebube@hotmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/isaacgchaniel/"
+                class="connect_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                LinkedIn<span class="visually-hidden">
+                  (opens in a new tab)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/GChaniel"
+                class="connect_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-github-fill" aria-hidden="true"></i>
+                GitHub<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+
           <form
             action="https://formspree.io/f/xqeqrwbw"
             method="post"
             class="contact_form"
             id="contact_form"
+            novalidate
           >
             <div class="contact_group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                class="contact_input"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                class="contact_input"
-              />
+              <div class="contact_field">
+                <label for="contact-name" class="contact_label">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  class="contact_input"
+                />
+              </div>
+              <div class="contact_field">
+                <label for="contact-email" class="contact_label">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  class="contact_input"
+                />
+              </div>
             </div>
 
-            <input
-              type="text"
-              name="project_title"
-              placeholder="Project Title"
-              class="contact_input"
-            />
+            <div class="contact_field">
+              <label for="contact-message-field" class="contact_label"
+                >Message</label
+              >
+              <textarea
+                id="contact-message-field"
+                name="message"
+                required
+                class="contact_input"
+              ></textarea>
+            </div>
 
-            <textarea
-              name="message"
-              placeholder="Enter your Message"
-              class="contact_input"
-            ></textarea>
-
-            <p class="contact_message" id="contact-message"></p>
+            <p
+              class="contact_message"
+              id="contact-message"
+              role="status"
+              aria-live="polite"
+            ></p>
 
             <button type="submit" class="button contact_button">
               Send Message
@@ -492,27 +789,31 @@
           <a
             href="https://www.linkedin.com/in/isaacgchaniel/"
             target="_blank"
+            rel="noopener noreferrer"
             class="footer_social-link"
+            aria-label="LinkedIn (opens in a new tab)"
           >
-            <i class="ri-linkedin-fill"></i>
+            <i class="ri-linkedin-fill" aria-hidden="true"></i>
           </a>
 
           <a
             href="https://github.com/GChaniel"
             target="_blank"
+            rel="noopener noreferrer"
             class="footer_social-link"
+            aria-label="GitHub (opens in a new tab)"
           >
-            <i class="ri-github-fill"></i>
+            <i class="ri-github-fill" aria-hidden="true"></i>
           </a>
         </div>
 
         <span class="footer_copyright">
-          &#169; Copyright IEN. All right reserved.
+          &#169; 2026 Isaac GChaniel. All rights reserved.
         </span>
       </div>
     </footer>
-    <button id="scrollTopBtn" aria-label="Back to top">
-      <i class="ri-arrow-up-line"></i>
+    <button type="button" id="scrollTopBtn" aria-label="Back to top">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
     </button>
     <script src="js/portfolio.js"></script>
   </body>
